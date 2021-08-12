@@ -6,6 +6,7 @@ public class Main {
         Supermarket supermarket = new Supermarket(product);
         ProducerRunnable producer = new ProducerRunnable(supermarket);
         ConsumerRunnable consumer = new ConsumerRunnable(supermarket);
+        //启动消费者和生产者线程
         new Thread(producer).start();
         new Thread(consumer).start();
     }
